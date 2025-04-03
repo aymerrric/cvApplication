@@ -1,3 +1,79 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -28,6 +104,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  padding: 20px;
 }
 
 h1 {
@@ -65,4 +142,65 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  border: 1px lightgrey solid;
+}
+
+.inputs-container {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.section-selector {
+  font-size: 1.2rem;
+}
+
+aside {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: stretch;
+}
+
+.button-section-selector {
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: transform 0.15s ease-in-out;
+  margin: 15px;
+}
+
+.button-section-selector:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
