@@ -49,4 +49,40 @@ export default [
     id: 1,
     title: "School Information",
   },
+  {
+    data: [
+      {
+        label: "Company Name",
+        type: "text",
+        placeHolder: "Google",
+        inputName: "company-name",
+      },
+      {
+        label: "Position Title",
+        type: "text",
+        placeHolder: "Software Engineer",
+        inputName: "position-title",
+      },
+      {
+        label: "Main Responsibilities",
+        type: "textarea",
+        placeHolder: "Developing and maintaining web applications...",
+        inputName: "main-responsibilities",
+      },
+      {
+        label: "Date From",
+        type: "date",
+        placeHolder: "01/01/2020",
+        inputName: "date-from",
+      },
+      {
+        label: "Date Until",
+        type: "date",
+        placeHolder: "12/31/2023",
+        inputName: "date-until",
+      },
+    ],
+    id: 2,
+    title: "Most Important Job",
+  },
 ];

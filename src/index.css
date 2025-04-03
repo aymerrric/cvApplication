@@ -101,6 +101,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -152,6 +153,8 @@ button:focus-visible {
   text-align: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 20px;
+  min-height: 400px;
+  min-width: 520px;
 }
 
 .input-container {
@@ -203,4 +206,15 @@ aside {
 .button-section-selector:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
+}
+
+.input-first-part {
+  min-width: 250px;
+  text-align: left;
+}
+
+.cv-display {
+  border: solid 2px grey;
+  padding: 15px;
+  margin-top: 15px;
 }
